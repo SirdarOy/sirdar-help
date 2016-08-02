@@ -1,6 +1,6 @@
 === Sirdar Help ===
 Contributors: Jukka Rautanen
-Donate link: http://sirdar.fi
+Author link: http://sirdar.fi
 Tags: help, documentation
 Requires at least: 3.0.1
 Tested up to: 3.4
