@@ -1,0 +1,9 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .sirdar-help-admin-partials-sirdar-help-admin-display-php #wpcontent {
+ 	padding-top: 20px;
+    padding-right: 20px;
+}
