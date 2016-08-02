@@ -61,15 +61,15 @@ class Sirdar_Help_Admin {
 	   */
 	  public function sirdar_help_register_menu_page() {
 	    add_menu_page(
-	        'Sirdar ohjeet',
-	        'Ohjeet',
+	        __("Help", "sirdar-help"),
+	        __("Help", "sirdar-help"),
 	        'manage_options',
 	        plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php',
 	        '',
 	        'dashicons-sos',
 	        83
 	    );
-		add_submenu_page( plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php', 'Lähde', 'Lähde', 'manage_options', plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-source.php', '');
+		add_submenu_page( plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php', __("Source", "sirdar-help"), __("Source", "sirdar-help"), 'manage_options', plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-source.php', '');
 	  }
 
 	/**

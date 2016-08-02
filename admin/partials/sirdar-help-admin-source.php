@@ -15,14 +15,14 @@
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <div id="sirdar-help">
-    <img src="<?php echo plugin_dir_url( __FILE__ ) . '../../public/img/sirdar.png'; ?>" alt="sirdar logo" style="margin-top: 15px;">
-	<h1><?php _e("Ohjeiden asetukset", "sirdar-help"); ?></h1>
+    <a href="http://sirdar.fi"><img src="<?php echo plugin_dir_url( __FILE__ ) . '../../public/img/sirdar.png'; ?>" alt="sirdar logo" style="margin-top: 15px;"></a>
+	<h1><?php _e("Help settings", "sirdar-help"); ?></h1>
 	<br>
 	<form method="post" action="options.php" id="xmlform">
 	<?php settings_fields( 'sirdar-help-settings' ); ?>
 	<?php do_settings_sections( 'sirdar-help-settings' ); ?>
 	<p>
-		<h2><?php _e("Aseta upotettava URL", "sirdar-help"); ?>:</h2>
+		<h2><?php _e("Set the URL of the source", "sirdar-help"); ?>:</h2>
 		<input type="text" name="sirdar-help-url" id="sirdar-help-url" class="text-input" value="<?php echo esc_attr( get_option('sirdar-help-url') ); ?>" placeholder="<?php _e('URL', 'sirdar-help'); ?>">
 	</p>
 	<?php submit_button(); ?>

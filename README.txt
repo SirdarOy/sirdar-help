@@ -14,6 +14,10 @@ Very simple plugin that embeds help documentation for clients from Google Docs (
 
 With this plugin you can embed documents from Google Docs (or any other iframe source) to your WordPress admin. Saves time for clients when they can find all the relevant info straight from the WordPress admin instead of browsing for emails or Basecamp for that help document link. Just paste the URL source of the iframe to the plugin settings page and you are done.
 
-== TODO ==
+== Contributing ==
 
-Translations..
+Feel free to make pull requests.
+
+== Screenshots ==
+
+https://i.gyazo.com/e2db238d51410176929e65730afbd93a.gif
