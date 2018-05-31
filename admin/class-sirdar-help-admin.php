@@ -59,18 +59,26 @@ class Sirdar_Help_Admin {
 	   *
 	   * @since     1.0.0
 	   */
-	  public function sirdar_help_register_menu_page() {
-	    add_menu_page(
-	        __("Help", "sirdar-help"),
-	        __("Help", "sirdar-help"),
-	        'manage_options',
-	        plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php',
-	        '',
-	        'dashicons-sos',
-	        83
-	    );
-		add_submenu_page( plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php', __("Source", "sirdar-help"), __("Source", "sirdar-help"), 'manage_options', plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-source.php', '');
-	  }
+	public function sirdar_help_register_menu_page() {
+		add_menu_page(
+			__("Help", "sirdar-help"),
+			__("Help", "sirdar-help"),
+			'manage_options',
+			'sirdar-help-admin-display',
+			array( $this, 'display_help' ),
+			'dashicons-sos',
+			83
+		);
+		add_submenu_page( 'sirdar-help-admin-display', __("Source", "sirdar-help"), __("Source", "sirdar-help"), 'manage_options', 'sirdar-help-admin-source', array( $this, 'help_source' ) );
+	}
+
+	public function display_help() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-display.php';
+	}
+
+	public function help_source() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) .'admin/partials/sirdar-help-admin-source.php';
+	}
 
 	/**
 	 * Register the stylesheets for the admin area.
