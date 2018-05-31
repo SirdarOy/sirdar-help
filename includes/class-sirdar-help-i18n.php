@@ -33,15 +33,16 @@ class Sirdar_Help_i18n {
 	 * @since    1.0.0
 	 */
 	public function load_plugin_textdomain() {
-
-		load_plugin_textdomain(
+		$loaded = load_plugin_textdomain(
 			'sirdar-help',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
+		if ( !$loaded ) {
+			load_muplugin_textdomain(
+				'sirdar-help',
+				dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			);
+		}
 	}
-
-
-
 }
