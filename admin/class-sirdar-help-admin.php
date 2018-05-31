@@ -67,7 +67,7 @@ class Sirdar_Help_Admin {
 			'sirdar-help-admin-display',
 			array( $this, 'display_help' ),
 			'dashicons-sos',
-			83
+			0
 		);
 		add_submenu_page( 'sirdar-help-admin-display', __("Source", "sirdar-help"), __("Source", "sirdar-help"), 'manage_options', 'sirdar-help-admin-source', array( $this, 'help_source' ) );
 	}
