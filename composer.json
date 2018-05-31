@@ -9,8 +9,6 @@
         "email": "support@sirdar.fi",
         "homepage": "https://sirdar.fi"
     }],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "type": "wordpress-plugin",
     "require": {
         "php": ">=5.3.2"
